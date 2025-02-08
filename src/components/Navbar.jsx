@@ -14,7 +14,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-white text-black p-4 flex items-center justify-between relative z-50">
+    <nav className="bg-white text-black p-4 flex items-center justify-between relative z-50 sticky top-0 shadow-md">
       <div className="flex items-center space-x-2">
         <img src={uiclogo} alt="UIC Logo" className="h-8 w-auto" />
         <h1 className="text-xl font-bold hidden lg:block">Whiteboard</h1>

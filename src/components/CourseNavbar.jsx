@@ -2,12 +2,12 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import {Home, Users, ClipboardList, BarChart3, ChevronLeft, ChevronRight} from "lucide-react";
 
-export default function SideNavbar() {
+export default function SideNavbar({crn}) {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <div
-      className={`h-screen bg-gray-800 text-white transition-all duration-300 ${
+      className={`h-screen bg-gray-800 text-white transition-all duration-300 z-40 ${
         isCollapsed ? "w-16" : "w-64"
       } flex flex-col relative`}
     >
@@ -22,7 +22,7 @@ export default function SideNavbar() {
       {/* Navigation Links */}
       <nav className="flex flex-col space-y-2 mt-16">
         <NavItem to="/" icon={<Home size={24} />} label="Home" isCollapsed={isCollapsed} />
-        <NavItem to="/contacts" icon={<Users size={24} />} label="Contacts" isCollapsed={isCollapsed} />
+        <NavItem to={`/courses/${crn}/contacts`} icon={<Users size={24} />} label="Contacts" isCollapsed={isCollapsed} />
         <NavItem to="/assignments" icon={<ClipboardList size={24} />} label="Assignments" isCollapsed={isCollapsed} />
         <NavItem to="/grades" icon={<BarChart3 size={24} />} label="Grades" isCollapsed={isCollapsed} />
       </nav>
