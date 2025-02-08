@@ -1,3 +1,17 @@
+import './Courses.css'
+
 export default function Courses() {
-  return <h1>Courses</h1>;
+  return (
+    <>
+      <ul id='link-history'>
+
+      </ul>
+      
+      <div id='course-container'>
+        <div className='course-item'>
+
+        </div>
+      </div>
+    </>
+  );
 }
