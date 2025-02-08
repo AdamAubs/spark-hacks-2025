@@ -1,16 +1,10 @@
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
+import {useState, useEffect} from "react";
 import Button from "./UI/button";
 import Dropdown from "./UI/dropdown";
 import uiclogo from "../assets/uiclogo.png";
 import courseData from "../data/courses.json";
-import {
-  LibraryBig,
-  House,
-  CalendarDays,
-  BarChart3,
-  Settings,
-} from "lucide-react"; // Import icons
+import {LibraryBig, House, CalendarDays, BarChart3, Settings} from "lucide-react"; // Import icons
 
 export default function Navbar() {
   const [courses, setCourses] = useState([]);
@@ -56,16 +50,14 @@ export default function Navbar() {
         <Button variant="ghost" asChild>
           <Link to="/grades" className="flex items-center space-x-2">
             <BarChart3 size={18} />
-            <span className="hidden sm:inline">Grades</span>{" "}
-            {/* Hide text on mobile */}
+            <span className="hidden sm:inline">Grades</span> {/* Hide text on mobile */}
           </Link>
         </Button>
 
         <Button variant="ghost" asChild>
           <Link to="/calendar" className="flex items-center space-x-2">
             <CalendarDays size={18} />
-            <span className="hidden sm:inline">Calendar</span>{" "}
-            {/* Hide text on mobile */}
+            <span className="hidden sm:inline">Calendar</span> {/* Hide text on mobile */}
           </Link>
         </Button>
       </div>
