@@ -1,10 +1,17 @@
-import {Link} from "react-router-dom";
-import {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Button from "./UI/button";
 import Dropdown from "./UI/dropdown";
 import uiclogo from "../assets/uiclogo.png";
 import courseData from "../data/courses.json";
-import {LibraryBig, House, CalendarDays, BarChart3, Settings} from "lucide-react"; // Import icons
+import {
+  LibraryBig,
+  House,
+  CalendarDays,
+  BarChart3,
+  CircleDollarSign,
+  Settings,
+} from "lucide-react"; // Import icons
 
 export default function Navbar() {
   const [courses, setCourses] = useState([]);
@@ -40,7 +47,7 @@ export default function Navbar() {
           }
         >
           {courses.length > 0 ? (
-            courses.map(course => (
+            courses.map((course) => (
               <Link
                 key={course.title}
                 to={`/courses/${course.courseNumber}`}
@@ -65,6 +72,13 @@ export default function Navbar() {
           <Link to="/calendar" className="flex items-center space-x-2">
             <CalendarDays size={18} />
             <span>Calendar</span>
+          </Link>
+        </Button>
+
+        <Button variant="ghost" asChild>
+          <Link to="/wager-goals" className="flex items-center space-x-2">
+            <CircleDollarSign size={18} />
+            <span>Bet</span>
           </Link>
         </Button>
       </div>

@@ -1,0 +1,37 @@
+{
+  "weeklyBets": [
+    {
+      "id": 1,
+      "bet": "I will complete all my assignments this week",
+      "amount": 10,
+      "pool": 500,
+      "winners": 10,
+      "hasJoined": false,
+      "minAmount": 50,
+      "maxAmount": 500,
+      "entryAmount": 10
+    }
+  ],
+  "futureBets": [
+    {
+      "id": 2,
+      "bet": "I will get all A's this semester",
+      "amount": 20,
+      "pool": 2000,
+      "winners": 50,
+      "hasJoined": false,
+      "minAmount": 100,
+      "maxAmount": 5000,
+      "entryAmount": 20
+    }
+  ],
+  "socialBets": [
+    {
+      "id": 3,
+      "bet": "If 50% of students attend the hackathon, free pizza!",
+      "goal": 100,
+      "current": 45,
+      "hasJoined": false
+    }
+  ]
+}
