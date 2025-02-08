@@ -1,5 +1,6 @@
 .calendar-container {
   height: 100vh;
+
 }
 
 .fc {
@@ -9,3 +10,5 @@
 .fc-toolbar {
   background-color: #f5f5f5; /* Change toolbar background */
 }
+
+
