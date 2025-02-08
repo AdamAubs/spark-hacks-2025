@@ -1,0 +1,228 @@
+
+
+.grades-container {
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: #f7fafc;
+ }
+ 
+ 
+ /* Course Card Styles */
+ .course-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease;
+ }
+ 
+ 
+ .course-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+ }
+ 
+ 
+ /* Header Section */
+ .course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+ }
+ 
+ 
+ .course-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2d3748;
+ }
+ 
+ 
+ .course-grade {
+    position: relative;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+ }
+ 
+ 
+ /* Recent Grades Section */
+ .grades-title {
+    font-size: 16px;
+    font-weight: 60;
+    color: #4a5568;
+    margin-bottom: 1rem;
+ }
+ 
+ 
+ .grades-list {
+    list-style-type: none;
+    padding: 0;
+ }
+ 
+ 
+ .grade-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+ }
+ 
+ 
+ .grade-item:hover {
+    background-color: #e2e8f0;
+ }
+ 
+ 
+ .grade-title {
+    color: #4a5568;
+    font-weight: 500;
+ }
+ 
+ 
+ .grade-value {
+    position: relative;
+    display: inline-block;
+ }
+ 
+ 
+ /* N/A Placeholder for Grades */
+ .real-grade {
+    visibility: visible;
+    font-weight: bold;
+    color: #000;
+ }
+ 
+ 
+ /* Hover Effect for Grades */
+ .grade-value:hover .real-grade {
+    visibility: visible;
+ }
+ /* General Styles */
+ body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7fafc; /* Light gray background for the page */
+ }
+ 
+ 
+ .grades-container {
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: #f7fafc;
+ }
+ 
+ 
+ /* Course Card Styles */
+ .course-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease;
+ }
+ 
+ 
+ .course-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+ }
+ 
+ 
+ /* Header Section */
+ .course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+ }
+ 
+ 
+ .course-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2d3748;
+ }
+ 
+ 
+ .course-grade {
+    position: relative;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    color: black; /* Ensure text inside is black */
+    font-weight: bold;
+    transition: all 0.3s ease;
+ }
+ 
+ 
+ /* Recent Grades Section */
+ .grades-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 1rem;
+ }
+ 
+ 
+ .grades-list {
+    list-style-type: none;
+    padding: 0;
+ }
+ 
+ 
+ .grade-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+ }
+ 
+ 
+ .grade-item:hover {
+    background-color: #e2e8f0;
+ }
+ 
+ 
+ .grade-title {
+    color: #4a5568;
+    font-weight: 500;
+ }
+ 
+ 
+ .grade-value {
+    position: relative;
+    display: inline-block;
+ }
+ 
+ 
+ /* N/A Placeholder for Grades */
+ .real-grade {
+    visibility: visible;
+    font-weight: bold;
+    color: #000;
+ }
+ 
+ 
+ /* Hover Effect for Grades */
+ .grade-value:hover .real-grade {
+    visibility: visible;
+ }
+ 
