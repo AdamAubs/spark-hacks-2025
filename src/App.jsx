@@ -12,8 +12,8 @@ export default function App() {
     <MainLayout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/courses/:courseName" element={<Courses />} />
-        <Route path="/courses/:courseName/contacts" element={<Contacts />} />
+        <Route path="/courses/:crn" element={<Courses />} />
+        <Route path="/courses/:crn/contacts" element={<Contacts />} />
         <Route path="/grades" element={<Grades />} />
         <Route path="/calendar" element={<MyCalendar />} />
         <Route path="/wager-goals" element={<WagerGoals />} />
