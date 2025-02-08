@@ -63,7 +63,7 @@ export default function Grades() {
    return (
        <div className="grades-container">
            {courses.map((course, index) => (
-               <div key={index} className="course-card">
+               <div key={index} className="grade-course-card">
                    {/* Course Header */}
                    <div className="course-header">
                        <h2 className="course-title">{course.name}</h2>
