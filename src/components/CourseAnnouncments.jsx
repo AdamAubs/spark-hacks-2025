@@ -17,7 +17,7 @@ export default function CourseAnnouncements() {
   return (
     <div className="px-4 py-6 bg-white shadow-lg rounded-lg max-w-3xl mx-auto">
       {/* Announcement Label */}
-      <p className="text-2xl text-center text-gray-800 font-bold mb-6">
+      <p className="text-2xl text-center text-gray-800 font-bold mb-6 overflow-x-auto">
         Announcements
       </p>
 
