@@ -1,18 +1,18 @@
 [
   {
     "title": "Math 101",
-    "image": "/assets/English101.webp"
+    "image": "/math101.webp"
   },
   {
     "title": "English 101",
-    "image": "/assets/react.svg"
+    "image": "/English101.webp"
   },
   {
     "title": "Physics 101",
-    "image": "/assets/react.svg"
+    "image": "/physics101.webp"
   },
   {
     "title": "History 102",
-    "image": "/assets/react.svg"
+    "image": "/history102.jpeg"
   }
 ]
