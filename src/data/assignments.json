@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Project 1",
+    "courseNumber": "CS101",
+    "dueDate": "2025-03-10"
+  },
+  {
+    "name": "Essay Draft",
+    "courseNumber": "ENG200",
+    "dueDate": "2025-03-12"
+  },
+  {
+    "name": "Quiz 5",
+    "courseNumber": "MATH220",
+    "dueDate": "2025-03-08"
+  }
+]
