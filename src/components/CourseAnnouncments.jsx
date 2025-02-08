@@ -1,28 +1,28 @@
-export default function CsAnnouncements() {
-  return (
-    <div className="px-2 bg-white shadow-md rounded-md">
-      {/* Announcement Label */}
-      <p className="text-center rounded-md px-4 py-2 font-bold">Announcements</p>
+import AnnouncementCard from "./AnnouncementCard";
+import courseData from "../data/courses.json";
 
-      {/* Scrollable Announcement List */}
-      <ul className=" list-none rounded-md p-4 w-full h-[500px] overflow-y-scroll">
-        {[...Array(8)].map((_, index) => (
-          <li
-            key={index}
-            className={`flex flex-col items-start p-3 w-full h-24 overflow-y-auto rounded-md ${
-              index % 2 === 0 ? "bg-gray-200" : "bg-gray-300"
-            }`}
-          >
-            <p className="">Title</p>
-            <p className="">Date</p>
-            <p className="text-sm leading-5">
-              The European languages are members of the same family. Their separate existence is a myth. For science,
-              music, sport, etc., Europe uses the same vocabulary. The languages only differ in their grammar, their
-              pronunciation, and their most common words.
-            </p>
-          </li>
-        ))}
-      </ul>
+export default function CourseAnnouncements() {
+  // Loop through courses and their announcements, with safety checks for missing data
+  const allAnnouncements = courseData.flatMap(
+    course =>
+      course.content // Check if 'content' exists
+        ? course.content.map(announcement => ({
+            title: announcement.title,
+            date: announcement.date,
+            content: announcement.paragraph // Updated key for content
+          }))
+        : [] // Return an empty array if no 'content' found
+  );
+
+  return (
+    <div className="px-4 py-6 bg-white shadow-lg rounded-lg max-w-3xl mx-auto">
+      {/* Announcement Label */}
+      <p className="text-2xl text-center text-gray-800 font-bold mb-6 truncate">Announcements</p>
+
+      {/* Map over all announcements and pass each one to the AnnouncementCard */}
+      {allAnnouncements.map((announcement, index) => (
+        <AnnouncementCard key={index} announcement={announcement} />
+      ))}
     </div>
   );
 }

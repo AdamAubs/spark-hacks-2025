@@ -7,6 +7,8 @@ import "../styles/MyCalendar.css";
 const MyCalendar = () => {
   const [courses, setCourses] = useState([]);
   const [events, setEvents] = useState([]);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [tasksForSelectedDate, setTasksForSelectedDate] = useState([]);
 
   useEffect(() => {
     setCourses(coursesData);
@@ -21,6 +23,7 @@ const MyCalendar = () => {
           backgroundColor: course.color,
           extendedProps: {
             status: assignment.status,
+            description: assignment.description,
           },
         }))
       );
@@ -34,8 +37,46 @@ const MyCalendar = () => {
     return `20${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
+  // Date click handler
+  const handleDateClick = (info) => {
+    const clickedDate = info.dateStr; // This is the clicked date in 'YYYY-MM-DD' format
+    console.log("Clicked Date: ", clickedDate); // Debugging line
+
+    setSelectedDate(clickedDate);
+
+    // Find all tasks for the clicked date
+    const tasksForThisDate = events.filter(
+      (event) => event.start === clickedDate
+    );
+    console.log("Filtered Tasks for this date: ", tasksForThisDate); // Debugging line
+
+    setTasksForSelectedDate(tasksForThisDate);
+  };
+
   return (
     <div className="calendar-container">
+      {/* Display the clicked date's tasks */}
+      {selectedDate && (
+        <div className="tasks-list">
+          <h3>Tasks for {selectedDate}</h3>
+          <ul>
+            {tasksForSelectedDate.length > 0 ? (
+              tasksForSelectedDate.map((task, index) => (
+                <li key={index}>
+                  <p>
+                    <strong>{task.title}</strong>
+                  </p>
+                  <p>Status: {task.extendedProps.status}</p>
+                  <p>{task.extendedProps.description}</p>
+                </li>
+              ))
+            ) : (
+              <p>No tasks for this day.</p>
+            )}
+          </ul>
+        </div>
+      )}
+
       <FullCalendar
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
@@ -45,6 +86,7 @@ const MyCalendar = () => {
           center: "title",
           right: "dayGridMonth,timeGridWeek,timeGridDay",
         }}
+        dateClick={handleDateClick} // Add the date click handler here
       />
     </div>
   );

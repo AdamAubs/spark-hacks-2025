@@ -6,7 +6,6 @@
     "semester": "Fall 24",
     "CRN": "66103",
     "color": "#be123c",
-
     "progress": 60,
     "assignments_due": 2,
     "last_study_session": "2025-02-06",
@@ -22,9 +21,30 @@
         "dueDate": "2/7/25",
         "status": "in-progress"
       }
+    ],
+    "content": [
+      {
+        "title": "Hello Hackers",
+        "date": "2/7/25",
+        "paragraph": "Welcome, to the wonderful hackathon"
+      },
+      {
+        "title": "Party Time",
+        "date": "2/8/25",
+        "paragraph": "The deadline for extra credit submissions is fast approaching—submit your work by the end of next week to earn bonus points!"
+      },
+      {
+        "title": "Important Update",
+        "date": "2/9/25",
+        "paragraph": "There will be an additional review session on 2/10/25."
+      },
+      {
+        "title": "Extra Credit Opportunity",
+        "date": "2/10/25",
+        "paragraph": "Students can submit extra credit work by the end of next week."
+      }
     ]
   },
-
   {
     "title": "English 101",
     "image": "/English101.webp",
@@ -36,9 +56,20 @@
     "assignments_due": 0,
     "last_study_session": "2025-02-04",
     "grade": "B",
-    "assignments": []
+    "assignments": [],
+    "content": [
+      {
+        "title": "Final Paper Reminder",
+        "date": "2/9/25",
+        "paragraph": "The final paper is due in two weeks, please start your drafts early."
+      },
+      {
+        "title": "Group Project",
+        "date": "2/8/25",
+        "paragraph": "Group project presentations will begin next week."
+      }
+    ]
   },
-
   {
     "title": "Physics 101",
     "image": "/physics101.webp",
@@ -71,6 +102,18 @@
         "dueDate": "2/5/25",
         "status": "completed"
       }
+    ],
+    "content": [
+      {
+        "title": "Midterm Grades",
+        "date": "2/8/25",
+        "paragraph": "Midterm grades will be posted by 2/10/25."
+      },
+      {
+        "title": "Lab Equipment Maintenance",
+        "date": "2/9/25",
+        "paragraph": "There will be a brief maintenance session on lab equipment tomorrow."
+      }
     ]
   },
   {
@@ -88,6 +131,18 @@
         "title": "History Essay",
         "dueDate": "2/7/25",
         "status": "completed"
+      }
+    ],
+    "content": [
+      {
+        "title": "Essay Deadline Reminder",
+        "date": "2/6/25",
+        "paragraph": "Remember to submit your history essay by 2/7/25."
+      },
+      {
+        "title": "Upcoming Exam",
+        "date": "2/8/25",
+        "paragraph": "The next history exam will take place on 2/14/25."
       }
     ]
   }
