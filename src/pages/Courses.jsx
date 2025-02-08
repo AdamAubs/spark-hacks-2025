@@ -17,18 +17,18 @@ export default function Courses() {
   }, [crn, course]);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-full">
       {/* Sidebar */}
       <SideNavbar crn={crn} />
 
       {/* Main Content */}
       <div className="flex-1">
         <CoursePageHistory />
-        <div className="grid grid-cols-6 gap-4 p-4">
-          <div className="col-span-4">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 p-4">
+          <div className="col-span-1 lg:col-span-4">
             <UpcomingAssignments />
           </div>
-          <div className="col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <CsAnnoucments />
           </div>
         </div>
