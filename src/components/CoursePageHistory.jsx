@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 
-export default function CourseNav() {
+export default function CoursePageHistory() {
   let {crn} = useParams();
 
   return (
