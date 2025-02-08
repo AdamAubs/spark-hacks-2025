@@ -2,7 +2,7 @@ import React from "react";
 
 const CourseCard = ({course}) => {
   return (
-    <div className="shadow-lg rounded-2xl overflow-hidden text-white">
+    <div className="shadow-lg rounded-2xl overflow-hidden text-white transition hover:scale-[1.02]">
       <div className="" style={{backgroundColor: course.color}}>
         <div className="p-4">
           <h2 className="text-xl font-bold">{course.title}</h2>
