@@ -5,9 +5,9 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 
 export default function Assignments() {
     const categories = {
-        Homeworks: ["Math Assignment", "Science Report", "History Essay", "Coding Exercise"],
-        Projects: ["Group Project", "Research Paper", "Presentation", "Final Project"],
-        Assessments: ["Quiz 1", "Midterm", "Final Exam", "Extra Credit"]
+        Homework: ["Math Assignment", "Science Report", "History Essay", "Coding Exercise"],
+        Project: ["Group Project", "Research Paper", "Presentation", "Final Project"],
+        Assessment: ["Quiz 1", "Midterm", "Final Exam", "Extra Credit"]
     };
 
     const [openDropdown, setOpenDropdown] = useState({});
