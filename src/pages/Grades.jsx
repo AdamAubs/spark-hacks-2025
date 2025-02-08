@@ -29,7 +29,7 @@ export default function Grades() {
         {/* Header Row */}
         <div className="flex justify-between items-center mb-4">
           {/* Course Title */}
-          <h1 className="text-3xl font-bold text-gray-800">{course ? `${course.title} Grades` : "Course Not Found"}</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{course ? `${course.title} Grades` : "Course Not Found"}</h1>
 
           {/* Grade Pill (Right Side) */}
           {course && (
