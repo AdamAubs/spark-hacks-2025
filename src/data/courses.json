@@ -70,13 +70,8 @@
     "image": "/history102.jpeg",
     "instructor": "John Doe",
     "semester": "Fall 24",
-<<<<<<< HEAD
     "CRN": "66106",
     "color": "red-500",
-=======
-    "CRN": "66103",
-    "color": "#2563eb",
->>>>>>> 1b8194aef3cce9e3e835c631d9d215d68c9859f8
     "progress": 75,
     "assignments_due": 1,
     "last_study_session": "2/7/25",
