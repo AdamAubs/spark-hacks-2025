@@ -1,0 +1,15 @@
+#courses-root {
+}
+
+#courses-side {
+
+}
+
+#courses-main {
+
+}
+
+#main-content {
+    display: flex;
+    flex-direction: row;
+}
