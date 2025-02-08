@@ -1,8 +1,8 @@
-import { Routes, Route } from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
-import Grades from "./pages/Grades";
+import GradesGrid from "./pages/GradesGrid";
 import MyCalendar from "./pages/MyCalendar";
 import Contacts from "./pages/Contacts";
 import Assignments from "./pages/Assignments";
