@@ -1,11 +1,16 @@
 import CoursesGrid from "../components/CoursesGrid";
-import AssignmentsBoard from "../components/AssignmentsBoard";
 
 export default function Home() {
   return (
-    <div>
-      <div className="my-courses">
-        <CoursesGrid />
+    <div className="p-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="md:col-span-3">
+          <CoursesGrid />
+        </div>
+
+        <div className="md:col-span-1">
+          <UpcomingAssignments />
+        </div>
       </div>
       <div className="assignments">
         <AssignmentsBoard />
