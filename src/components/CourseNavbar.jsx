@@ -7,7 +7,7 @@ export default function SideNavbar() {
 
   return (
     <div
-      className={`h-screen bg-gray-800 text-white transition-all duration-300 ${
+      className={`h-screen bg-gray-800 text-white transition-all duration-300 z-40 ${
         isCollapsed ? "w-16" : "w-64"
       } flex flex-col relative`}
     >
