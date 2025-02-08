@@ -1,0 +1,24 @@
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+}
