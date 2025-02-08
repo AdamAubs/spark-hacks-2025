@@ -2,6 +2,11 @@
   {
     "title": "Math 101",
     "image": "/math101.webp",
+    "instructor": "John Doe",
+    "semester": "Fall 24",
+    "CRN": "66103",
+    "color": "purple-500",
+
     "progress": 60,
     "assignments_due": 2,
     "last_study_session": "2025-02-06",
@@ -18,17 +23,27 @@
       }
     ]
   },
+
   {
     "title": "English 101",
     "image": "/English101.webp",
+    "instructor": "John Doe",
+    "semester": "Fall 24",
+    "CRN": "66103",
+    "color": "green-500",
     "progress": 85,
     "assignments_due": 0,
     "last_study_session": "2025-02-04",
     "assignments": []
   },
+
   {
     "title": "Physics 101",
     "image": "/physics101.webp",
+    "instructor": "John Doe",
+    "semester": "Fall 24",
+    "CRN": "66103",
+    "color": "blue-500",
     "progress": 45,
     "assignments_due": 3,
     "last_study_session": "2025-02-07",
@@ -53,6 +68,10 @@
   {
     "title": "History 102",
     "image": "/history102.jpeg",
+    "instructor": "John Doe",
+    "semester": "Fall 24",
+    "CRN": "66103",
+    "color": "red-500",
     "progress": 75,
     "assignments_due": 1,
     "last_study_session": "2025-02-03",
