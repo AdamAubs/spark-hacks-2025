@@ -5,6 +5,7 @@ import Courses from "./pages/Courses";
 import Grades from "./pages/Grades";
 import MyCalendar from "./components/MyCalendar";
 import WagerGoals from "./pages/WagerGoals";
+import Contacts from "./pages/Contacts";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses/:courseName" element={<Courses />} />
+        <Route path="/courses/:courseName/contacts" element={<Contacts />} />
         <Route path="/grades" element={<Grades />} />
         <Route path="/calendar" element={<MyCalendar />} />
         <Route path="/wager-goals" element={<WagerGoals />} />
