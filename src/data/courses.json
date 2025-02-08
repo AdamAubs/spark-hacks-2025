@@ -29,13 +29,8 @@
     "image": "/English101.webp",
     "instructor": "John Doe",
     "semester": "Fall 24",
-<<<<<<< HEAD
     "CRN": "66104",
     "color": "green-500",
-=======
-    "CRN": "66103",
-    "color": "#6B46C1",
->>>>>>> 1b8194aef3cce9e3e835c631d9d215d68c9859f8
     "progress": 85,
     "assignments_due": 0,
     "last_study_session": "2025-02-04",
@@ -47,13 +42,8 @@
     "image": "/physics101.webp",
     "instructor": "John Doe",
     "semester": "Fall 24",
-<<<<<<< HEAD
     "CRN": "66105",
     "color": "blue-500",
-=======
-    "CRN": "66103",
-    "color": "#16a34a",
->>>>>>> 1b8194aef3cce9e3e835c631d9d215d68c9859f8
     "progress": 45,
     "assignments_due": 3,
     "last_study_session": "2025-02-07",
