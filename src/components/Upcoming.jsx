@@ -14,7 +14,7 @@ export default function Upcoming({ assignments }) {
                     ))}
                 </ul>
             ) : (
-                <p className className="no-assignments">You're All Caught Up!</p>
+                <p className="no-assignments">You're All Caught Up!</p>
             )}
         </div>
     );
