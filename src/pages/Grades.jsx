@@ -1,92 +1,39 @@
+import {useParams} from "react-router-dom";
+import SideNavbar from "../components/CourseNavbar";
+import Table from "../components/UI/table";
+import courses from "../data/courses.json";
 
-
-import './Grades.css'
 export default function Grades() {
-   const courses = [
-       {
-           name: "Math 101",
-           overallGrade: "88%",
-           recentGrades: [
-               { title: "Lecture 01", grade: "1/1" },
-               { title: "Lecture 02", grade: "1/1" },
-               { title: "Assignment 01", grade: "44/50" }
-           ]
-       },
-       {
-           name: "History 102",
-           overallGrade: "96%",
-           recentGrades: [
-               { title: "Lecture 01", grade: "1/1" },
-               { title: "Lecture 02", grade: "1/1" },
-               { title: "Assignment 01", grade: "48/50" }
-           ]
-       },
-       {
-           name: "English 101",
-           overallGrade: "75%",
-           recentGrades: [
-               { title: "Lecture 01", grade: "1/1" },
-               { title: "Lecture 02", grade: "1/1" },
-               { title: "Assignment 01", grade: "39/50" }
-           ]
-       },
-       {
-           name: "Physics 101",
-           overallGrade: "68%",
-           recentGrades: [
-               { title: "Lecture 01", grade: "1/1" },
-               { title: "Lecture 02", grade: "1/1" },
-               { title: "Assignment 01", grade: "30/50" }
-           ]
-       }
-   ];
+  const {crn} = useParams();
+  const course = courses.find(course => course.CRN === crn);
 
+  // Extract completed assignments
+  const completedAssignments = course?.completedAssignments || [];
 
-   // Helper function to determine background color based on overall grade
-   const getOverallGradeBackgroundColor = (grade) => {
-       const gradeNumber = parseFloat(grade.replace('%', ''));
-       // return gradeNumber >= 90 ? '#39e600' : '#c6ff1a'; // Green for >= 90%, Orange for < 90%
-       if(gradeNumber >= 90){
-           return '#39e600';
-       }
-       else if(gradeNumber >=80){
-           return '#c6ff1a';
-       }
-       else if(gradeNumber >= 70){
-           return '#ff9900';
-       } else if(gradeNumber < 70){
-           return '#ff0000';
-       }
-   };
+  // Define table headers
+  const headers = ["Assignment", "Type", "Due Date", "Completed Date", "Grade (%)"];
 
+  // Convert data to table rows
+  const data = completedAssignments.map(assignment => [
+    assignment.title,
+    assignment.type,
+    assignment.dueDate,
+    assignment.completedDate,
+    `${assignment.gradePercentage}%`
+  ]);
 
-   return (
-       <div className="grades-container">
-           {courses.map((course, index) => (
-               <div key={index} className="grade-course-card">
-                   {/* Course Header */}
-                   <div className="course-header">
-                       <h2 className="course-title">{course.name}</h2>
-                       <span className="course-grade" style={{ backgroundColor: getOverallGradeBackgroundColor(course.overallGrade) }}>
-                           <span className="real-grade">{course.overallGrade}</span>
-                       </span>
-                   </div>
+  return (
+    <div className="flex h-screen">
+      {/* Sidebar */}
+      <SideNavbar />
 
-
-                   {/* Recent Grades Section */}
-                   <h3 className="grades-title">Recent Grades</h3>
-                   <ul className="grades-list">
-                       {course.recentGrades.map((item, i) => (
-                           <li key={i} className="grade-item">
-                               <span className="grade-title">{item.title}</span>
-                               <span className="grade-value">
-                                   <span className="real-grade">{item.grade}</span>
-                               </span>
-                           </li>
-                       ))}
-                   </ul>
-               </div>
-           ))}
-       </div>
-   );
+      {/* Main Content */}
+      <div className="flex-1 p-6">
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          {course ? `${course.title} Grades` : "Course Not Found"}
+        </h1>
+        <Table headers={headers} data={data} />
+      </div>
+    </div>
+  );
 }
