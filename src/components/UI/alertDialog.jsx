@@ -5,13 +5,20 @@ export default function AlertDialog({open, setOpen, title, description, confirmL
   return (
     <AlertDialogPrimitive.Root open={open} onOpenChange={setOpen}>
       <AlertDialogPrimitive.Portal>
+        {/* Dark background overlay */}
         <AlertDialogPrimitive.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
-        <AlertDialogPrimitive.Content className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
-          <AlertDialogPrimitive.Title className="text-lg font-bold">{title}</AlertDialogPrimitive.Title>
-          <AlertDialogPrimitive.Description className="mt-2 text-gray-600">
+
+        {/* Popup Content (Increased Size) */}
+        <AlertDialogPrimitive.Content
+          className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+          bg-white p-8 rounded-lg shadow-lg w-3/4 md:w-1/2 lg:w-1/2 max-w-screen-md h-4/5 md:h-2/3 lg:h-1/2 flex flex-col"
+        >
+          <AlertDialogPrimitive.Title className="text-2xl font-bold">{title}</AlertDialogPrimitive.Title>
+          <AlertDialogPrimitive.Description className="mt-4 text-gray-600 flex-grow">
             {description}
           </AlertDialogPrimitive.Description>
-          <div className="mt-4 flex justify-end space-x-2">
+
+          <div className="mt-6 flex justify-end space-x-4">
             <AlertDialogPrimitive.Cancel asChild>
               <Button variant="outline">Cancel</Button>
             </AlertDialogPrimitive.Cancel>
