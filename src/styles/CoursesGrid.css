@@ -1,6 +1,5 @@
 .courses-grid {
   background-color: var(--expo-white);
-  border: 1px solid var(--steel-grey);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
