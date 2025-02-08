@@ -1,88 +1,93 @@
-import "./Grades.css";
-export default function GradesGrid() {
-  const courses = [
-    {
-      name: "Math 101",
-      overallGrade: "88%",
-      recentGrades: [
-        {title: "Lecture 01", grade: "1/1"},
-        {title: "Lecture 02", grade: "1/1"},
-        {title: "Assignment 01", grade: "44/50"}
-      ]
-    },
-    {
-      name: "History 102",
-      overallGrade: "96%",
-      recentGrades: [
-        {title: "Lecture 01", grade: "1/1"},
-        {title: "Lecture 02", grade: "1/1"},
-        {title: "Assignment 01", grade: "48/50"}
-      ]
-    },
-    {
-      name: "English 101",
-      overallGrade: "75%",
-      recentGrades: [
-        {title: "Lecture 01", grade: "1/1"},
-        {title: "Lecture 02", grade: "1/1"},
-        {title: "Assignment 01", grade: "39/50"}
-      ]
-    },
-    {
-      name: "Physics 101",
-      overallGrade: "68%",
-      recentGrades: [
-        {title: "Lecture 01", grade: "1/1"},
-        {title: "Lecture 02", grade: "1/1"},
-        {title: "Assignment 01", grade: "30/50"}
-      ]
-    }
-  ];
+import {useState} from "react";
+import {ChevronRight} from "lucide-react";
+import coursesData from "../data/courses.json";
+import AlertDialog from "../components/UI/alertDialog";
+import GradesTable from "../components/GradesTable";
 
-  // Helper function to determine background color based on overall grade
-  const getOverallGradeBackgroundColor = grade => {
-    const gradeNumber = parseFloat(grade.replace("%", ""));
-    // return gradeNumber >= 90 ? '#39e600' : '#c6ff1a'; // Green for >= 90%, Orange for < 90%
-    if (gradeNumber >= 90) {
-      return "#39e600";
-    } else if (gradeNumber >= 80) {
-      return "#c6ff1a";
-    } else if (gradeNumber >= 70) {
-      return "#ff9900";
-    } else if (gradeNumber < 70) {
-      return "#ff0000";
-    }
+export default function GradesGrid() {
+  const [selectedCourse, setSelectedCourse] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenGrades = course => {
+    setSelectedCourse(course);
+    setIsOpen(true);
   };
 
-  return (
-    <div className="grades-container">
-      {courses.map((course, index) => (
-        <div key={index} className="grade-course-card">
-          {/* Course Header */}
-          <div className="course-header">
-            <h2 className="course-title">{course.name}</h2>
-            <span
-              className="course-grade"
-              style={{backgroundColor: getOverallGradeBackgroundColor(course.overallGrade)}}
-            >
-              <span className="real-grade">{course.overallGrade}</span>
-            </span>
-          </div>
+  // Extract only required data from courses.json
+  const courses = coursesData.map(course => ({
+    ...course,
+    overallGrade: `${calculateOverallGrade(course.completedAssignments)}%`,
+    recentGrades: course.completedAssignments.slice(0, 1) // Get the most recent graded assignment
+  }));
 
-          {/* Recent Grades Section */}
-          <h3 className="grades-title">Recent Grades</h3>
-          <ul className="grades-list">
-            {course.recentGrades.map((item, i) => (
-              <li key={i} className="grade-item">
-                <span className="grade-title">{item.title}</span>
-                <span className="grade-value">
-                  <span className="real-grade">{item.grade}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
+  return (
+    <div className="space-y-4 p-4">
+      {courses.map((course, index) => (
+        <div
+          key={index}
+          className="flex rounded-lg overflow-hidden shadow-md h-24 cursor-pointer"
+          onClick={() => handleOpenGrades(course)}
+        >
+          <div className="p-4 w-full flex justify-between items-center" style={{backgroundColor: course.color}}>
+            {/* Chevron (Left) */}
+            <ChevronRight className="text-white w-6 h-6" />
+
+            {/* Course Info (Left) */}
+            <div className="flex-1 pl-2">
+              <h2 className="text-2xl font-bold text-white">{course.title}</h2>
+              {course.recentGrades.length > 0 ? (
+                <p className="text-sm text-gray-100">
+                  Recent: {course.recentGrades[0].title} - {course.recentGrades[0].gradePercentage}%
+                </p>
+              ) : (
+                <p className="text-sm text-gray-100">No recent grades</p>
+              )}
+            </div>
+
+            {/* Grade Bubble (Right) */}
+            <div className="bg-white flex items-center justify-center py-4 px-8 rounded-lg">
+              <div
+                className="flex items-center justify-center px-6 py-2 rounded-full shadow-md text-black font-bold text-lg"
+                style={{
+                  backgroundColor: getOverallGradeBackgroundColor(course.overallGrade),
+                  minWidth: "80px"
+                }}
+              >
+                {course.overallGrade}
+              </div>
+            </div>
+          </div>
         </div>
       ))}
+
+      {/* Popup for Viewing Grades */}
+      {selectedCourse && (
+        <AlertDialog
+          open={isOpen}
+          setOpen={setIsOpen}
+          title={`${selectedCourse.title} Grades`}
+          description={<GradesTable completedAssignments={selectedCourse.completedAssignments} />}
+          confirmLabel="Close"
+          onConfirm={() => setIsOpen(false)}
+        />
+      )}
     </div>
   );
 }
+
+// Helper function to calculate overall grade
+function calculateOverallGrade(completedAssignments) {
+  if (completedAssignments.length === 0) return "N/A";
+  const totalGrade = completedAssignments.reduce((sum, assignment) => sum + assignment.gradePercentage, 0);
+  return (totalGrade / completedAssignments.length).toFixed(1); // Round to 1 decimal place
+}
+
+// Helper function to determine background color based on overall grade
+function getOverallGradeBackgroundColor(grade) {
+  const gradeNumber = parseFloat(grade.replace("%", ""));
+  if (gradeNumber >= 90) return "#39e600"; // Green
+  if (gradeNumber >= 80) return "#c6ff1a"; // Yellow-green
+  if (gradeNumber >= 70) return "#ff9900"; // Orange
+  return "#ff0000"; // Red
+}
+``;
