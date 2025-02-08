@@ -1,12 +1,11 @@
 import courses from "../data/courses.json";
 import CourseCard from "./CourseCard";
-import "../styles/CoursesGrid.css";
 
 const CoursesGrid = () => {
   return (
-    <div className="courses-grid">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
       {courses.map((course, index) => (
-        <CourseCard key={index} title={course.title} image={course.image} />
+        <CourseCard key={index} course={course} />
       ))}
     </div>
   );
