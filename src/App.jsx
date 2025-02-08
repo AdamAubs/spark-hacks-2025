@@ -5,6 +5,7 @@ import Courses from "./pages/Courses";
 import Grades from "./pages/Grades";
 import MyCalendar from "./pages/MyCalendar";
 import Contacts from "./pages/Contacts";
+import Assignments from "./pages/Assignments";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/courses/:crn" element={<Courses />} />
         <Route path="/courses/:crn/contacts" element={<Contacts />} />
+        <Route path="/courses/:crn/assignments" element={<Assignments />} />
         <Route path="/grades" element={<Grades />} />
         <Route path="/calendar" element={<MyCalendar />} />
       </Routes>
