@@ -1,46 +1,21 @@
-import './Upcoming.css'
+import './Upcoming.css';
 
-export default function Upcoming() {
+export default function Upcoming({ assignments }) {
     return (
-        <>
-            <div id='upcoming-root'>
-                
-                <p id='upcomingLabel'>Upcoming</p>
+        <div id='upcoming-root'>
+            <p id='upcomingLabel'>Upcoming</p>
+            {assignments.length > 0 ? (
                 <ul id='due-list'>
-                    <li className='due-item'>
-                        <p>Homework 1: Using Figma</p>
-                        <p className='date-container'>2/7/25</p>
-                    </li>
-                    <li className='due-item'>
-                        <p>Homework 2: Creating Layouts With HTML & CSS!</p>
-                        <p className='date-container'>2/7/25</p>
-                    </li>
-                    <li className='due-item'>
-                        <p>Project 1 Part 1: Collab Prototype</p>
-                        <p className='date-container'>2/7/25</p>
-                    </li>
-                    <li className='due-item'>
-                        <p>Homework 3: Adding Functionality With Events</p>
-                        <p className='date-container'>2/7/25</p>    
-                    </li>
-                    <li className='due-item'>
-                        <p>Homework 4: More Styling....Colors!</p>
-                        <p className='date-container'>2/7/25</p>
-                    </li>
-                    <li className='due-item'>
-                        <p>Project 1 Part 2: Putting It All Together</p>
-                        <p className='date-container'>2/7/25</p>
-                    </li>
+                    {assignments.map((assignment, index) => (
+                        <li key={index}>
+                            <p>{assignment.title}</p>
+                            <p className='date-container'>{assignment.dueDate}</p>
+                        </li>
+                    ))}
                 </ul>
-            </div>
-        </>
-    );
-}
-
-function DueDate({date}) {
-    return (
-        <div className='date-container'>
-            <p>{date}</p>
+            ) : (
+                <p className className="no-assignments">You're All Caught Up!</p>
+            )}
         </div>
     );
 }
