@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import coursesData from "../data/courses.json";
+import "../styles/MyCalendar.css";
 
 const MyCalendar = () => {
   const [courses, setCourses] = useState([]);
@@ -34,7 +35,7 @@ const MyCalendar = () => {
   };
 
   return (
-    <div>
+    <div className="calendar-container">
       <FullCalendar
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"

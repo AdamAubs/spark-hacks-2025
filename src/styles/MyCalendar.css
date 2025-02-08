@@ -1,3 +1,11 @@
-.myCustomHeight {
-  height: 600px;
+.calendar-container {
+  height: 100vh;
+}
+
+.fc {
+  height: 100%; /* Ensures FullCalendar fills the container */
+}
+
+.fc-toolbar {
+  background-color: #f5f5f5; /* Change toolbar background */
 }
