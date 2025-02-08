@@ -1,8 +1,16 @@
-const CourseCard = ({ title, image }) => {
+import React from "react";
+
+const CourseCard = ({course}) => {
   return (
-    <div className="course-card">
-      <img src={image} alt={title} className="course-image" />
-      <h3>{title}</h3>
+    <div className={`p-4 rounded-2xl text-white shadow-lg bg-${course.color}`}>
+      <div>
+        <h2 className="text-xl font-bold">{course.title}</h2>
+        <p className="text-sm">{course.instructor}</p>
+      </div>
+      <div>
+        <p className="text-sm">{course.CRN}</p>
+        <p className="text-sm">📅 {course.semester}</p>
+      </div>
     </div>
   );
 };
