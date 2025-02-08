@@ -19,7 +19,7 @@ export default function Courses() {
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
-      <SideNavbar />
+      <SideNavbar crn={crn} />
 
       {/* Main Content */}
       <div className="flex-1">
