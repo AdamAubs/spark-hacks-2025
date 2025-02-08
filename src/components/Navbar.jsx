@@ -43,17 +43,8 @@ export default function Navbar() {
           }
         >
           {courses.length > 0 ? (
-<<<<<<< HEAD
-            courses.map((course) => (
-              <Link
-                key={course.title}
-                to={`/courses/${course.CRN}`}
-                className="block px-4 py-2 hover:bg-gray-200"
-              >
-=======
             courses.map(course => (
               <Link key={course.title} to={`/courses/${course.CRN}`} className="block px-4 py-2 hover:bg-gray-200">
->>>>>>> origin/main
                 {course.title}
               </Link>
             ))
