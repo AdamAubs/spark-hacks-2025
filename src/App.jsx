@@ -13,6 +13,7 @@ export default function App() {
     <MainLayout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:crn" element={<Courses />} />
         <Route path="/courses/:crn/contacts" element={<Contacts />} />
         <Route path="/courses/:crn/grades" element={<Grades />} />
