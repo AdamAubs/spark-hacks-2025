@@ -28,8 +28,18 @@ export default function SideNavbar({crn}) {
           label="Instructors"
           isCollapsed={isCollapsed}
         />
-        <NavItem to={`/courses/${crn}/assignments`} icon={<ClipboardList size={24} />} label="Assignments" isCollapsed={isCollapsed} />
-        <NavItem to="/grades" icon={<BarChart3 size={24} />} label="Grades" isCollapsed={isCollapsed} />
+        <NavItem
+          to={`/courses/${crn}/assignments`}
+          icon={<ClipboardList size={24} />}
+          label="Assignments"
+          isCollapsed={isCollapsed}
+        />
+        <NavItem
+          to={`/courses/${crn}/grades`}
+          icon={<BarChart3 size={24} />}
+          label="Grades"
+          isCollapsed={isCollapsed}
+        />
       </nav>
     </div>
   );
