@@ -1,5 +1,5 @@
 import "../styles/Courses.css";
-import CourseNav from "../components/CourseNav";
+import CourseNav from "../components/CoursePageHistory";
 import UpcomingAssignments from "../components/UpcomingAssignments"; // Import new component
 import CsAnnoucments from "../components/CourseAnnouncments";
 import courses from "../data/courses.json";
