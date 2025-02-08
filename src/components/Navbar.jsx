@@ -40,7 +40,7 @@ export default function Navbar() {
             courses.map(course => (
               <Link
                 key={course.title}
-                to={`/courses/${course.courseNumber}`}
+                to={`/courses/${course.CRN}`}
                 className="block px-4 py-2 hover:bg-gray-200"
               >
                 {course.title}
