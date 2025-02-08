@@ -7,7 +7,7 @@ export default function SideNavbar({crn}) {
 
   return (
     <div
-      className={`h-screen bg-gray-800 text-white h-full transition-all duration-300 z-40 ${
+      className={`h-screen bg-gray-800 text-white transition-all duration-300 z-40 ${
         isCollapsed ? "w-16" : "w-64"
       } flex flex-col relative`}
     >
@@ -25,10 +25,10 @@ export default function SideNavbar({crn}) {
         <NavItem
           to={`/courses/${crn}/contacts`}
           icon={<Users size={24} />}
-          label="Contacts"
+          label="Instructors"
           isCollapsed={isCollapsed}
         />
-        <NavItem to="/assignments" icon={<ClipboardList size={24} />} label="Assignments" isCollapsed={isCollapsed} />
+        <NavItem to={`/courses/${crn}/assignments`} icon={<ClipboardList size={24} />} label="Assignments" isCollapsed={isCollapsed} />
         <NavItem to="/grades" icon={<BarChart3 size={24} />} label="Grades" isCollapsed={isCollapsed} />
       </nav>
     </div>
