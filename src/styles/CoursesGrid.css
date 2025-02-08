@@ -1,0 +1,27 @@
+.courses-grid {
+  background-color: var(--expo-white);
+  border: 1px solid var(--steel-grey);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.course-card {
+  background-color: var(--navy-pier-blue);
+  color: var(--expo-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+}
+
+.course-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.course-card:hover {
+  background-color: var(--secondary-color);
+}

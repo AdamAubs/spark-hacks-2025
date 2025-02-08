@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Math 101",
+    "image": "/assets/English101.webp"
+  },
+  {
+    "title": "English 101",
+    "image": "/assets/react.svg"
+  },
+  {
+    "title": "Physics 101",
+    "image": "/assets/react.svg"
+  },
+  {
+    "title": "History 102",
+    "image": "/assets/react.svg"
+  }
+]

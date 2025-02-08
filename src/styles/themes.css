@@ -1,0 +1,17 @@
+:root {
+  --fire-engine-blue: #c8102e;
+  --navy-pier-blue: #003366;
+  --expo-white: #f4f4f4;
+  --steel-grey: #7d8289;
+
+  --background-color: var(--expo-white);
+  --text-color: var(--steel-grey);
+  --primary-color: var(--fire-engine-blue);
+  --secondary-color: var(--navy-pier-blue);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}

@@ -1,3 +1,11 @@
+import CoursesGrid from "../components/CoursesGrid";
+
 export default function Home() {
-  return <h2>Home</h2>;
+  return (
+    <div>
+      <div className="my-courses">
+        <CoursesGrid />
+      </div>
+    </div>
+  );
 }

@@ -12,6 +12,9 @@ export default function Navbar() {
         <li>
           <Link to="/courses">Courses</Link>
         </li>
+        <li>
+          <Link to="/grades">Grades</Link>
+        </li>
       </ul>
     </nav>
   );
