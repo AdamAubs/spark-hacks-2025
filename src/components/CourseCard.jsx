@@ -2,17 +2,14 @@ import React from "react";
 
 const CourseCard = ({course}) => {
   return (
-    <div className="shadow-lg rounded-2xl overflow-hidden text-white">
-      <div className="" style={{backgroundColor: course.color}}>
-        <div className="p-4">
-          <h2 className="text-xl font-bold">{course.title}</h2>
-          <p className="text-sm">{course.instructor}</p>
-        </div>
+    <div className={`p-4 rounded-2xl text-white shadow-lg bg-${course.color}`}>
+      <div>
+        <h2 className="text-xl font-bold">{course.title}</h2>
+        <p className="text-sm">{course.instructor}</p>
       </div>
-
-      <div className="bg-white p-3 flex justify-between items-center rounded-b-2xl text-gray-700">
-        <p className="text-sm font-medium">{course.CRN}</p>
-        <p className="text-sm">{course.semester}</p>
+      <div>
+        <p className="text-sm">{course.CRN}</p>
+        <p className="text-sm">📅 {course.semester}</p>
       </div>
     </div>
   );
