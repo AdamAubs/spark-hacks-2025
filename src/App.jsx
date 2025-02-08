@@ -9,8 +9,8 @@ export default function App() {
     <MainLayout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/courses/:courseName" element={<Courses />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/courses" element={<Grades />} />
       </Routes>
     </MainLayout>
   );
