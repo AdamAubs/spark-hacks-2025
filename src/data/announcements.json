@@ -1,0 +1,41 @@
+[
+    {
+        "CRN": "66103",
+        "title": "Math 101",
+        "date": "2/7/25",
+        "announcements": [
+            "Exam 1 is scheduled for Feb 14. Review materials are available online."
+        ]
+    },
+    {
+        "CRN": "66104",
+        "title": "English 101",
+        "date": "2/7/25",
+        "announcements": [
+            "Essay 1 draft due on Feb 10. Submit via the portal.",
+            "Next class: Discussion on 'To Kill a Mockingbird' chapters 5-8.",
+            "Grammar workshop on Feb 11 at 4 PM in Room 105.",
+            "Peer review session for essays on Feb 12."
+        ]
+    },
+    {
+        "CRN": "66105",
+        "title": "Physics 101",
+        "date": "2/7/25",
+        "announcements": [
+            "Lab 3 reports are due on Feb 9. Follow the provided format.",
+            "Quiz on Newton’s Laws will be held next Monday.",
+            "Extra credit opportunity: Submit a short report on Kepler’s Laws by Feb 15."
+        ]
+    },
+    {
+        "CRN": "66106",
+        "title": "History 102",
+        "date": "2/7/25",
+        "announcements": [
+            "Midterm review session on Feb 12 at 3 PM in Room 204.",
+            "Read Chapter 6 before the next lecture on the Renaissance.",
+            "Guest lecture on medieval Europe scheduled for Feb 14."
+        ]
+    }
+]

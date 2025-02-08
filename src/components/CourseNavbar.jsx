@@ -1,8 +1,12 @@
-import {useState} from "react";
+import {useState, useContext } from "react";
 import {Link} from "react-router-dom";
 import {Home, Users, ClipboardList, BarChart3, ChevronLeft, ChevronRight} from "lucide-react";
+import { useParams } from "react-router-dom";
+import { CourseContext } from "../App";
 
-export default function SideNavbar({crn}) {
+export default function SideNavbar() {
+  const { crn } = useContext(CourseContext);
+
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (

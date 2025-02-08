@@ -1,13 +1,15 @@
 import {Link} from "react-router-dom";
-import {useState, useEffect} from "react";
+import {useState, useEffect, useContext} from "react";
 import Button from "./UI/button";
 import Dropdown from "./UI/dropdown";
 import uiclogo from "../assets/uiclogo.png";
 import courseData from "../data/courses.json";
 import {LibraryBig, House, CalendarDays, BarChart3, Settings} from "lucide-react"; // Import icons
+import { CourseContext } from "../App";
 
 export default function Navbar() {
   const [courses, setCourses] = useState([]);
+  const { setCRN } = useContext(CourseContext);
 
   useEffect(() => {
     setCourses(courseData);
@@ -38,7 +40,7 @@ export default function Navbar() {
         >
           {courses.length > 0 ? (
             courses.map(course => (
-              <Link key={course.title} to={`/courses/${course.CRN}`} className="block px-4 py-2 hover:bg-gray-200">
+              <Link onClick={() => setCRN(course.CRN)} key={course.title} to={`/courses/${course.CRN}`} className="block px-4 py-2 hover:bg-gray-200">
                 {course.title}
               </Link>
             ))
