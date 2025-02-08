@@ -1,0 +1,38 @@
+.assignments-board {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap; /* Allow columns to wrap if there's insufficient space */
+}
+
+.assignments-column {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  min-width: 250px; /* Set minimum width so columns don't collapse */
+  max-width: 33%; /* Ensure the columns never exceed a third of the available width */
+}
+
+.assignment-card {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.due {
+  background-color: #ffe0e0;
+  border-left: 5px solid red;
+}
+
+.in-progress {
+  background-color: #fff4cc;
+  border-left: 5px solid orange;
+}
+
+.completed {
+  background-color: #e0ffe0;
+  border-left: 5px solid green;
+}

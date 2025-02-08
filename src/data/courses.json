@@ -1,18 +1,67 @@
 [
   {
     "title": "Math 101",
-    "image": "/assets/English101.webp"
+    "image": "/math101.webp",
+    "progress": 60,
+    "assignments_due": 2,
+    "last_study_session": "2025-02-06",
+    "assignments": [
+      {
+        "title": "Math Homework 1",
+        "dueDate": "2025-02-10",
+        "status": "due"
+      },
+      {
+        "title": "Algebra Quiz",
+        "dueDate": "2025-02-08",
+        "status": "in-progress"
+      }
+    ]
   },
   {
     "title": "English 101",
-    "image": "/English101.webp"
+    "image": "/English101.webp",
+    "progress": 85,
+    "assignments_due": 0,
+    "last_study_session": "2025-02-04",
+    "assignments": []
   },
   {
     "title": "Physics 101",
-    "image": "/physics101.webp"
+    "image": "/physics101.webp",
+    "progress": 45,
+    "assignments_due": 3,
+    "last_study_session": "2025-02-07",
+    "assignments": [
+      {
+        "title": "Physics Lab Report",
+        "dueDate": "2025-02-12",
+        "status": "in-progress"
+      },
+      {
+        "title": "Thermodynamics Worksheet",
+        "dueDate": "2025-02-09",
+        "status": "due"
+      },
+      {
+        "title": "Midterm Review",
+        "dueDate": "2025-02-15",
+        "status": "completed"
+      }
+    ]
   },
   {
     "title": "History 102",
-    "image": "/history102.jpeg"
+    "image": "/history102.jpeg",
+    "progress": 75,
+    "assignments_due": 1,
+    "last_study_session": "2025-02-03",
+    "assignments": [
+      {
+        "title": "History Essay",
+        "dueDate": "2025-02-05",
+        "status": "completed"
+      }
+    ]
   }
 ]
