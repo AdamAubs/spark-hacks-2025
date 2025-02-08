@@ -1,4 +1,5 @@
 import CoursesGrid from "../components/CoursesGrid";
+import UpcomingAssignments from "../components/UpcomingAssignments";
 
 export default function Home() {
   return (
@@ -11,9 +12,6 @@ export default function Home() {
         <div className="md:col-span-1">
           <UpcomingAssignments />
         </div>
-      </div>
-      <div className="assignments">
-        <AssignmentsBoard />
       </div>
     </div>
   );
