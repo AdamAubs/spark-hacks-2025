@@ -25,7 +25,7 @@ export default function SideNavbar() {
 
       {/* Navigation Links */}
       <nav className="flex flex-col space-y-2 mt-16">
-        <NavItem to="/" icon={<Home size={24} />} label="Home" isCollapsed={isCollapsed} />
+        <NavItem to={`/courses/${crn}`} icon={<Home size={24} />} label="Home" isCollapsed={isCollapsed} />
         <NavItem
           to={`/courses/${crn}/contacts`}
           icon={<Users size={24} />}
