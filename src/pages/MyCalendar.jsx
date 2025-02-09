@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
@@ -16,27 +16,27 @@ const MyCalendar = () => {
 
   useEffect(() => {
     if (courses.length > 0) {
-      const formattedEvents = courses.flatMap((course) =>
-        course.assignments.map((assignment) => ({
+      const formattedEvents = courses.flatMap(course =>
+        course.assignments.map(assignment => ({
           title: `${course.title}: ${assignment.title}`,
           start: convertToISODate(assignment.dueDate),
           backgroundColor: course.color,
           extendedProps: {
-            status: assignment.status,
-          },
+            status: assignment.status
+          }
         }))
       );
       setEvents(formattedEvents);
     }
   }, [courses]);
 
-  const convertToISODate = (dateString) => {
+  const convertToISODate = dateString => {
     const [month, day, year] = dateString.split("/");
     return `20${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
   return (
-    <div className="calendar-container">
+    <div className="calendar-container p-6">
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
@@ -45,7 +45,7 @@ const MyCalendar = () => {
         headerToolbar={{
           left: "prev,next",
           center: "title",
-          right: "today",
+          right: "today"
         }}
       />
     </div>
