@@ -25,7 +25,7 @@ export default function GradesGrid() {
       {courses.map((course, index) => (
         <div
           key={index}
-          className="flex rounded-lg overflow-hidden shadow-md h-24 cursor-pointer"
+          className="flex rounded-lg overflow-hidden shadow-md h-24 cursor-pointer transition hover:scale-[1.01]"
           onClick={() => handleOpenGrades(course)}
         >
           <div className="p-4 w-full flex justify-between items-center" style={{backgroundColor: course.color}}>

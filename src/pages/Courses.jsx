@@ -25,7 +25,8 @@ export default function Courses() {
 
       {/* Main Content */}
       <div className="flex-1">
-        <CoursePageHistory coursename={coursename} />
+        <CoursePageHistory coursename={course?.title} color={course?.color} />
+
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 p-4">
           <div className="col-span-1 lg:col-span-4">
             <UpcomingAssignments assignments={assignments} />
