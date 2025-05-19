@@ -22,15 +22,28 @@ Run the project
 npm run dev
 ```
 
-Key Features:
-Course home page: Displays enrolled courses and their announcements. These components are clickable and lead to the courses page.
-Courses pages: Shows upcoming assignments and accouncmence for the class.
-Grades Overview: Displays grades in a structured table/grid format with the given percentages.
-Calendar Integration: Uses FullCalendar to manage and display events.
-Responsive UI: Built with reusable UI components for a modern experience.
+## Key Features:
+- Course home page
 
-Tech Stack:
-Frontend: React (Vite) for fast development and optimized builds.
-Styling: Regular CSS and tailwind CSS.
-Static Data: JSON files for mock data (courses, assignments, announcements)
+  Displays enrolled courses and their announcements. These components are clickable and lead to the courses page.
+- Courses pages
+
+  Shows upcoming assignments and accouncmence for the class.
+  
+- Grades Overview
+  
+  Displays grades in a structured table/grid format with the given percentages.
+  
+- Calendar Integration
+
+  Uses FullCalendar to manage and display events.
+
+- Responsive UI
+
+  Built with reusable UI components for a modern experience.
+
+## Tech Stack:
+- Frontend: React (Vite) for fast development and optimized builds.
+- Styling: Tailwind CSS and standard CSS
+- Data: Static JSON files for mock data (courses, assignments, announcements)
 
