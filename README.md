@@ -1,5 +1,5 @@
 
-# [LiteBoard](https://spark-hacks-2025.vercel.app/)
+# [LiteBoard](https://spark-hacks-2025.vercel.app/) — Click to view
 
 Our project is a clone of the learning management tool BlackBoard. The goal was to simplify the design of blackboard, making it easier to use for students and teachers.
 
